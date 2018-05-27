@@ -1,0 +1,6 @@
+[submodule "External/mosquitto"]
+	path = External/mosquitto
+	url = git@github.com:eclipse/mosquitto.git
+[submodule "External/cereal"]
+	path = External/cereal
+	url = git@github.com:USCiLab/cereal.git
