@@ -1,11 +1,11 @@
 # MqttRPC ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-`MqttRPC` is a RPC library for C++ and uses MQTT as its underlying transport. 
+`MqttRPC` is a RPC library for C++ and uses [MQTT](https://en.wikipedia.org/wiki/MQTT) as its underlying transport. 
 
 While there are many rpc libraries available, they are all typically based on a traditional client-server implemention. 
 This forces one-to-one relationships between entities ultimately leading to scalabiltiy issues for larger distributed systems with both one-to-one and one-to-many relationships between entities.
 
-`MqttRPC` tries to introduce a concept of a `peer` and unlike tradtional client-sever relationship it is bidrectional and supports one-to-many rpc.
+`MqttRPC` tries to introduce a concept of a `peer` and unlike tradtional client-sever relationship it is bidrectional and supports one-to-many and many-to-many rpc.
 
 `MqttRPC` doesn't use any IDL and is _extremely_ lightweight. And most importantly, unlike its peers, it doesn't use boost and is threading model agnostic. It is straight forward to embed this in an existing event loop. 
 
@@ -27,7 +27,7 @@ void main()
     bool shut_down = false; 
 
     // peer connection objects define one side of a connection and can exist on different mqtt clients. 
-    rpc::PeerConnection peer_one, peer_two, peer_three; 
+    rpc::PeerConnection peer_one, peer_two; 
 
     // if a connection can be defined as A-B
     // one side of the connection will be initialized as 
