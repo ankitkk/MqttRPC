@@ -56,6 +56,7 @@ void main()
     }
 }
 ```
+A slighlty more detailed [example](https://github.com/ankitkk/MqttRPC/blob/master/Examples/Simple.cpp).  
 
 `MqttRPC` uses two really awesome projects.
 
